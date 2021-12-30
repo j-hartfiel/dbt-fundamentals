@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_payments
+    description: Payments data from the Stripe application
+    columns:
+        - name: order_id
+          description: Primary key for stg_payments
+          tests:
+            - unique
+            - not_null
+        - name: status
+          description: "{{ doc('payment_status') }}"
+          tests:
+            - accepted_values:
+                values: ['success', 'fail']

@@ -6,4 +6,5 @@ sources:
       schema: stripe
       tables:
         - name: payment
+          description: Payment data from the stripe application
 
